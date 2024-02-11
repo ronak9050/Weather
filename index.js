@@ -1,9 +1,11 @@
+const appid = "Your_API_ID";
+
 function find() {
     // Get the user's input
     const city = document.getElementById("city").value;
   
     // Make the API request
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0538ecb5852498f50a821d856c3575c7&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&units=metric`)
       .then(response => response.json())
       .then(data => {
         // Display the weather information to the user
